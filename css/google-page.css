@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Nav-bar */
+
+a {
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+.navbar {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 70px 70px 1fr 70px 90px;
+  grid-template-rows: 50px;
+  grid-template-areas: "about store . gmail images sign-in"
+}
+
+.navbar {
+  padding: 0.25em 2em;
+  margin-right: 4em;
+
+
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.about {
+  grid-area: about;
+  justify-self: center;
+  align-self: center;
+
+}
+.store {
+  grid-area: store;
+  align-self: center;
+
+}
+.gmail {
+  grid-area: gmail;
+  justify-self: center;
+  align-self: center;
+
+}
+.images {
+  grid-area: images;
+  justify-self: center;
+  align-self: center;
+
+}
+.sign-in {
+  grid-area: sign-in;
+  justify-self: center;
+  align-self: center;
+
+}
+
+
+
+/* main-section */
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 70px 50px 50px;
+  grid-template-areas:
+  '. logo .'
+  '.search.'
+  '. searchbtns .'
+  '. text .';
+  ;
+}
+
+.logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: end;
+  cursor: pointer;
+}
+.search {
+  grid-area: search;
+  height: 30px;
+  align-self: center;
+  border-radius: 25px;
+  border: 1px solid rgba(242, 242, 242, 1);
+}
+
+.search:hover {
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+
+.searchbtns {
+  grid-area: searchbtns;
+  align-self: top;
+  justify-self: center;
+}
+
+.search-btn {
+  padding: 1em;
+  cursor: pointer;
+  border: 1px solid white;
+  background: rgba(242, 242, 242, 1);
+  border-radius: 5px;
+  margin: 0 0.25em;
+  opacity: 0.8;
+}
+
+.search-btn:hover {
+  border: 1px solid gray;
+  opacity: 1;
+}
+
+.search {
+    outline:none !important;
+}
+
+
+.text {
+  grid-area: text;
+  align-self: top;
+  justify-self: center;
+  margin: 0;
+  font-size: 13px;
+  font-family: arial,sans-serif;
+  color: #1a0dab;
+}
+
+.text a {
+  color: #1a0dab;
+}
+
+/* footer */
+footer {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100px 100px 150px 1fr 100px 100px 100px;
+  grid-template-areas:
+  'advertising business how-search-works . privacy terms settings';
+
+  position: absolute;
+  bottom: 0px;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+
+.footer a {
+  opacity: 0.8;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.advertising {
+  grid-area: advertising;
+  justify-self: center;
+  align-self: center;
+}
+.business {
+  grid-area: business;
+  justify-self: center;
+  align-self: center;
+}
+.privacy {
+  grid-area: privacy;
+  justify-self: center;
+  align-self: center;
+}
+.terms {
+  grid-area: terms;
+  justify-self: center;
+  align-self: center;
+}
+.settings {
+  grid-area: settings;
+  justify-self: center;
+  align-self: center;
+}
+
+.how-search-works {
+  grid-area: how-search-works;
+  justify-self: center;
+  align-self: center;
+}
